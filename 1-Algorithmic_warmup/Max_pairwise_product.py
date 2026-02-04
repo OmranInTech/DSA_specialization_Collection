@@ -1,11 +1,11 @@
-'''
+def max_pairwise_product(numbers):
+    '''
 problem : max pairwise product 
 Given a sequenc of array or number find the maximum pairwise product in the array
 time complexity : O(n^2)
 Space complexity : O(1)
 
 '''
-def max_pairwise_product(numbers):
     if not isinstance(numbers, list) or len(numbers) < 2:
         raise ValueError("Input must be a list with at least two numbers.")
     max_product = float('-inf')  

@@ -1,4 +1,5 @@
-"""
+def fibonacci(n):
+    """
 Problem: Fibonacci Number (Recursive)
 This program computes the nth Fibonacci number using recursion.
 Fibonacci definition:
@@ -12,7 +13,6 @@ Time Complexity: O(2^n)
 Space Complexity: O(n)
 - Due to recursion call stack depth
 """
-def fibonacci(n):
     if not isinstance(n, int) or n < 0:
         raise ValueError("Input must be a non-negative integer.")
     if n == 0:

@@ -1,4 +1,5 @@
-"""
+def last_digit_fibonacci(n):
+    """
     Calculate the last digit of the nth Fibonacci number.
 
     Parameters:
@@ -16,7 +17,6 @@
     - Raises TypeError if input is not an integer.
     - Raises ValueError if input is negative.
     """
-def last_digit_fibonacci(n):
     if not isinstance(n, int):
         raise TypeError("Input must be an integer.")
     if n < 0:
