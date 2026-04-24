@@ -1,30 +1,29 @@
-def collecting_signatures():
+def covering_segments():
     n = int(input())
     
     segments = []
     
     for _ in range(n):
-        l, r = map(int, input().split())
-        segments.append((l, r))
-    
+        start, finish = map(int, input().split())
+        segments.append((start, finish))
+
     # sort by right endpoint
     segments.sort(key=lambda x: x[1])
-    
+
     points = []
     i = 0
-    
+
     while i < n:
         # choose right endpoint of first uncovered segment
         point = segments[i][1]
         points.append(point)
-        
+
         # skip all segments covered by this point
         while i < n and segments[i][0] <= point:
             i += 1
-    
-    # output
+
     print(len(points))
     print(*points)
 
 
-collecting_signatures()
+covering_segments()
